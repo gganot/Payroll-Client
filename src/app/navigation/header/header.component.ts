@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/shared/user.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +10,16 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Output() public sidenavToggle = new EventEmitter();
 
-  constructor() { }
+  constructor(private router: Router, private service: UserService) { }
 
   ngOnInit(): void {
   }
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }
-
+  onLogout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/user/login']);
+  }
+    
 }
