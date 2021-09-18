@@ -1,0 +1,87 @@
+<form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+    <section fxLayout="column" fxFlexAlign="stretch">
+
+        <div style="padding:10px" class="hrline">
+            <nav class="navbar navbar-expand-sm bg-light">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-success" type="submit"><i class="fa fa-save"></i> Save</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-secondary" type="button">Cancel</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-secondary" type="button"><i class="fa fa-user-plus"></i> New</button>
+                    </li>
+                
+                </ul>
+
+            </nav>
+        </div>
+
+        <mat-tab-group>
+            <mat-tab label="Primary Info">
+                <div class="card" style="width: 40rem;">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Employee ID</mat-label>
+                                <input matInput placeholder="Ex. Bruce" name="EmployeeId" value="" #EmployeeId="ngModel"
+                                    [(ngModel)]="EmpModel.EmployeeId">
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>First Name</mat-label>
+                                <input matInput placeholder="Ex. Bruce" name="FirstName" value="" #FirstName="ngModel"
+                                    [(ngModel)]="EmpModel.FirstName">
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput placeholder="Ex. Lee" name="LastName" value="" #LastName="ngModel"
+                                    [(ngModel)]="EmpModel.LastName">
+                            </mat-form-field>
+                        </div>
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Middle Name</mat-label>
+                                <input matInput placeholder="Ex. Van" value="" name="MiddleName" #MiddleName="ngModel"
+                                    [(ngModel)]="EmpModel.MiddleName">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Organizational Assignment">
+
+            </mat-tab>
+            <mat-tab label="Personal Data">
+                <p>We will consume our .NET Core application. Basically, we will create complete CRUD client app.</p>
+            </mat-tab>
+            <mat-tab label="Statutory Data">
+                <p>By using material components, we are going to create fully responsive navigation menu, with its
+                    side-bar
+                    as well.</p>
+            </mat-tab>
+            <mat-tab label="Salaries">
+                <p>By using material components, we are going to create fully responsive navigation menu, with its
+                    side-bar
+                    as well.</p>
+            </mat-tab>
+            <mat-tab label="Employment Data">
+                <p>By using material components, we are going to create fully responsive navigation menu, with its
+                    side-bar
+                    as well.</p>
+            </mat-tab>
+            <mat-tab label="Employment List">
+                <p>By using material components, we are going to create fully responsive navigation menu, with its
+                    side-bar
+                    as well.</p>
+            </mat-tab>
+        </mat-tab-group>
+
+    </section>
+</form>

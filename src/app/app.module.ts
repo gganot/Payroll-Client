@@ -19,6 +19,10 @@ import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { EmployeeMasterfileComponent } from './hr/employee-masterfile/employee-masterfile.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -32,7 +36,8 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     UserComponent,
     RegistrationComponent,
     AdminPanelComponent,
-    ForbiddenComponent
+    ForbiddenComponent,
+    EmployeeMasterfileComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,9 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatMenuModule,
     ToastrModule.forRoot({
       progressBar: true
     }),

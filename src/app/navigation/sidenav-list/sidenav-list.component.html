@@ -1,9 +1,9 @@
 <mat-nav-list class="pay-nav">
-    <a mat-list-item>
+    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
         <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
     </a>
-    <a mat-list-item>
-        <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Human Resource</span>   
+    <a mat-list-item routerLink="/hr/employee-masterfile" (click)="onSidenavClose()">
+        <mat-icon>assignment_ind</mat-icon> <span class="nav-caption">Employment Masterfile</span>   
     </a>
     <a mat-list-item>
         <mat-icon>account_balance</mat-icon><span class="nav-caption">Payroll</span>

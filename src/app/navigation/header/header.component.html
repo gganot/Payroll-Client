@@ -5,15 +5,21 @@
         </button>
     </div>
     <div>
-        <a routerLink="/home">Owner-Account</a>
+        <a routerLink="/home">Bapplware Payroll Main</a>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-            <li>
-                <a routerLink="/owner">Actions</a>
-            </li>
-            <li>
-                <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
-            </li>
-        </ul>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>person</mat-icon>
+              <span>Change Password</span>
+            </button>
+            <button mat-menu-item (click)="onLogout()">
+              <mat-icon>close</mat-icon>
+              <span>Logout</span>
+            </button>
+          
+          </mat-menu>
     </div>
