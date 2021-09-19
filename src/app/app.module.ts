@@ -13,6 +13,7 @@ import { LoginComponent } from './user/login/login.component';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { UserService } from './shared/user.service';
+import { EmployeeService } from './shared/employee.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { ToastrModule } from 'ngx-toastr';
 import { UserComponent } from './user/user.component';
@@ -23,6 +24,9 @@ import { EmployeeMasterfileComponent } from './hr/employee-masterfile/employee-m
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
+import { DepartmentService } from './shared/department.service';
+import { OrganizationComponent } from './hr/employee/control/organization/organization.component';
+
 
 
 @NgModule({
@@ -37,7 +41,8 @@ import {MatMenuModule} from '@angular/material/menu';
     RegistrationComponent,
     AdminPanelComponent,
     ForbiddenComponent,
-    EmployeeMasterfileComponent
+    EmployeeMasterfileComponent,
+    OrganizationComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +64,7 @@ import {MatMenuModule} from '@angular/material/menu';
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }],
+  },EmployeeService,DepartmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,25 +1,27 @@
-
+<div class="mat-toolbar">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
     <div>
-        <button mat-icon-button (click)="onToggleSidenav()">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </div>
-    <div>
-        <a routerLink="/home">Bapplware Payroll Main</a>
+      <a routerLink="/home">Bapplware Payroll Main</a>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>person</mat-icon>
-              <span>Change Password</span>
-            </button>
-            <button mat-menu-item (click)="onLogout()">
-              <mat-icon>close</mat-icon>
-              <span>Logout</span>
-            </button>
-          
-          </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>person</mat-icon>
+          <span>Change Password</span>
+        </button>
+        <button mat-menu-item (click)="onLogout()">
+          <mat-icon>close</mat-icon>
+          <span>Logout</span>
+        </button>
+
+      </mat-menu>
     </div>
+  </div>

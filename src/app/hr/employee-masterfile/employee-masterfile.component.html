@@ -12,23 +12,23 @@
                         <button class="btn btn-outline-secondary" type="button">Cancel</button>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-outline-secondary" type="button"><i class="fa fa-user-plus"></i> New</button>
+                        <button class="btn btn-outline-secondary" type="button"><i class="fa fa-user-plus"></i>
+                            New</button>
                     </li>
-                
+
                 </ul>
 
             </nav>
         </div>
-
         <mat-tab-group>
             <mat-tab label="Primary Info">
                 <div class="card" style="width: 40rem;">
                     <div class="card-body">
                         <div class="form-group">
                             <mat-form-field class="example-full-width" appearance="fill">
-                                <mat-label>Employee ID</mat-label>
-                                <input matInput placeholder="Ex. Bruce" name="EmployeeId" value="" #EmployeeId="ngModel"
-                                    [(ngModel)]="EmpModel.EmployeeId">
+                                <mat-label>Employee No</mat-label>
+                                <input matInput placeholder="Ex. Bruce" name="EmployeeNo" value="" #EmployeeId="ngModel"
+                                    [(ngModel)]="EmpModel.EmployeeNo">
                             </mat-form-field>
                         </div>
                         <div class="form-group">
@@ -56,7 +56,19 @@
                 </div>
             </mat-tab>
             <mat-tab label="Organizational Assignment">
-
+                <div class="card" style="width: 40rem;">
+                    <div class="card-body">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Select Department</mat-label>
+                            <mat-select #DepartmentId="ngModel" name="DepartmentId" [(ngModel)]="EmpModel.DepartmentId">
+                                <mat-option [value]="null">--</mat-option>
+                                <mat-option *ngFor="let item of departments" [value]="item.departmentId">
+                                    {{item.departmentName}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
             </mat-tab>
             <mat-tab label="Personal Data">
                 <p>We will consume our .NET Core application. Basically, we will create complete CRUD client app.</p>
