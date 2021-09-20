@@ -1,7 +1,7 @@
 export interface EmployeeModel   {
-    EmployeeNo:any;
-    FirstName: any;
-    LastName: any;
-    MiddleName: any;
+    employeeNo:any;
+    firstName: any;
+    lastName: any;
+    middleName: any;
 
 }

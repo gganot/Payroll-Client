@@ -21,12 +21,15 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { EmployeeMasterfileComponent } from './hr/employee-masterfile/employee-masterfile.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
 import {MatMenuModule} from '@angular/material/menu';
 import { DepartmentService } from './shared/department.service';
 import { OrganizationComponent } from './hr/employee/control/organization/organization.component';
-
+import { EmployeeListComponent } from './hr/employee/control/employee-list/employee-list.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -42,7 +45,9 @@ import { OrganizationComponent } from './hr/employee/control/organization/organi
     AdminPanelComponent,
     ForbiddenComponent,
     EmployeeMasterfileComponent,
-    OrganizationComponent
+    OrganizationComponent,
+    EmployeeListComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -56,6 +61,9 @@ import { OrganizationComponent } from './hr/employee/control/organization/organi
     MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
+    MatSortModule,
+    MatTableModule,
+    MatPaginatorModule,
     ToastrModule.forRoot({
       progressBar: true
     }),

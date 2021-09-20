@@ -8,6 +8,7 @@ import { RegistrationComponent } from '../user/registration/registration.compone
 import { LoginComponent } from '../user/login/login.component';
 import { HomeComponent } from '../layout/home/home.component';
 import { EmployeeMasterfileComponent } from '../hr/employee-masterfile/employee-masterfile.component';
+import { EmployeeListComponent } from '../hr/employee/control/employee-list/employee-list.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/user/login',pathMatch:'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'home',component:HomeComponent,canActivate:[AuthGuard]},
   {path:'hr/employee-masterfile',component:EmployeeMasterfileComponent,canActivate:[AuthGuard]},
   {path:'forbidden',component:ForbiddenComponent},
-  {path:'adminpanel',component:AdminPanelComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}}
+  {path:'adminpanel',component:AdminPanelComponent,canActivate:[AuthGuard],data :{permittedRoles:['Admin']}},
+  {path:'hr/employee/employee-list',component:EmployeeListComponent,canActivate:[AuthGuard]}
 ];
 
 @NgModule({
